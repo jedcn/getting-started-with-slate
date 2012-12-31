@@ -1,0 +1,46 @@
+# See: https://github.com/jigish/slate
+# See: http://thume.ca/howto/2012/11/19/using-slate/
+#
+# Basic Config
+config defaultToCurrentScreen true
+config nudgePercentOf screenSize
+config resizePercentOf screenSize
+config windowHintsShowIcons true
+config windowHintsIgnoreHiddenWindows false
+config windowHintsSpread true
+
+#
+# Abstract positions. Used in commands below.
+alias full move screenOriginX;screenOriginY screenSizeX;screenSizeY
+alias lefthalf move screenOriginX;screenOriginY screenSizeX/2;screenSizeY
+alias righthalf move screenOriginX+screenSizeX/2;screenOriginY screenSizeX/2;screenSizeY
+alias tophalf move screenOriginX;screenOriginY screenSizeX;screenSizeY/2
+alias bottomhalf move screenOriginX;screenOriginY+screenSizeY/2 screenSizeX;screenSizeY/2
+alias topleft corner top-left resize:screenSizeX/2;screenSizeY/2
+alias topright corner top-right resize:screenSizeX/2;screenSizeY/2
+alias bottomleft corner bottom-left resize:screenSizeX/2;screenSizeY/2
+alias bottomright corner bottom-right resize:screenSizeX/2;screenSizeY/2
+
+#
+# Push Bindings
+bind u:ctrl;cmd  ${topleft}
+bind j:ctrl;cmd  ${lefthalf}
+bind m:ctrl;cmd  ${bottomleft}
+
+bind i:ctrl;cmd  ${tophalf}
+bind k:ctrl;cmd  ${full}
+bind ,:ctrl;cmd  ${bottomhalf}
+
+bind o:ctrl;cmd  ${topright}
+bind l:ctrl;cmd  ${righthalf}
+bind .:ctrl;cmd  ${bottomright}
+
+#
+# Overlay all windows on screen with qwerty home row letters, so I can
+# foreground any of them with one more keystroke.
+bind ;:cmd;ctrl hint ASDFGHJKL
+
+# Throw Bindings
+bind 1:ctrl;cmd         throw 0 resize
+bind 2:ctrl;cmd         throw 1 resize
+bind 3:ctrl;cmd         throw 2 resize
