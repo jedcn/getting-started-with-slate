@@ -11,28 +11,27 @@ Or, if you *have not* heard of [Slate](https://github.com/jigish/slate)
 before, but you are using MacOS **and**:
 
 * You find it slightly irritating whenever you manually adjust the
-  height and width of windows using a mouse, **or**
+  height and width of windows using a mouse
 
 * You find yourself with a two display setup and you wish you could
-  press a button and have an application jump between displays, **or**
+  press a button and have an application jump between displays
 
 * You find yourself pressing COMMAND + CONTROL to switch between
   applications, but sometimes you let go before you reach the one you
   want and have to start over again, or perhaps you "go past" the one
   you want and have to loop through again.
 
-Then you should read on!
+**Then you should read on!**
 
-The goal of this project is to get you up and running with Slate in 10
-or 15 minutes.
+**The goal of this project is to get you up and running with Slate in 10
+or 15 minutes.**
 
 [Slate](https://github.com/jigish/slate) can help you manage your
 windows, and it *is* really powerful and it can be *extensively*
 configured.
 
-However, you can get up and running with a basic configuration in no
-time and it can start contributing to your daily productivity
-immediately.
+However, you can get going with a basic configuration in no time and
+it can start contributing to your daily productivity immediately.
 
 This project provides a basic configuration, describes the motivation
 behind it, and shows you how to get everything up and running.
@@ -72,6 +71,15 @@ similar to (but faster and less error prone ) than using the
 COMMAND-TAB mechanism.
 
 ### How Will This Work?
+
+#### Size and Placement
+
+The core of window sizing and placing is based on key-bindings laid
+out in the form of a grid, similar to
+[a numeric keypad](http://en.wikipedia.org/wiki/Numeric_keypad), and
+then utilizing the grid metaphor to make movement more familiar and
+think about movement in terms of the "corners" and the "sides" of the
+numeric keypad.
 
 Presuming you've got a QWERTY North American keyboard layout, if you
 look down you'll see the following keys *sort of* make a 3 x 3 grid:
@@ -117,10 +125,10 @@ CONTROL and COMMAND and then press the keys on the corners of this
 table, then you will cause the current window to take up one quarter
 of the screen and go to the associated corner, defined as follows:
 
-* ```COMMAND + CTRL + u``` = upper left
-* ```COMMAND + CTRL + o``` = upper right
-* ```COMMAND + CTRL + m``` = bottom left
-* ```COMMAND + CTRL + u``` = bottom right
+* ```COMMAND + CONTROL + u``` = upper left corner
+* ```COMMAND + CONTROL + o``` = upper right corner
+* ```COMMAND + CONTROL + m``` = bottom left corner
+* ```COMMAND + CONTROL + u``` = bottom right corner
 
 Further, the configuration makes it so that if you hold CONTROL and
 COMMAND and then press the keys on the top, bottom, left, and right,
@@ -128,7 +136,65 @@ then you will cause the current window to take up one half of the
 screen and it will split vertically or horizontally, defined as
 follows:
 
-* ```COMMAND + CTRL + i``` = top half
-* ```COMMAND + CTRL + l``` = right half
-* ```COMMAND + CTRL + ,``` = bottom half
-* ```COMMAND + CTRL + j``` = bottom left
+* ```COMMAND + CONTROL + i``` = top half of screen
+* ```COMMAND + CONTROL + l``` = right half of screen
+* ```COMMAND + CONTROL + ,``` = bottom half of screen
+* ```COMMAND + CONTROL + j``` = bottom left of screen
+
+And finally, if you press ```COMMAND + CONTROL + k``` you will make
+the current window take up the entire screen (it will be maximized).
+
+#### Moving Between Displays
+
+Coming Soon..
+
+But, until then, if you've got two displays, press ```COMMAND +
+CONTROL + 2``` to cause the current window to appear on the second
+display. Immediately after, press ```COMMAND + CONTROL + 1``` to cause
+the same window to jump back to the first display.
+
+#### Switching Windows
+
+Coming Soon..
+
+But, until then, open at least two windows. Then, press ```COMMAND +
+CONTROL + ;```
+
+As soon as you press that key-binding, application icons will appear
+and a letter will be associated with each icon. These letters are
+configured to always be on the home row of the QWERTY keyboard.
+
+If you press the associated letter, you change applications accordingly.
+
+### How do I get started?
+
+Coming Soon..
+
+But, until then, visit the Slate homepage and follow the installation
+instructions.
+
+Once is installed, clone this repository to somewhere on your file
+system.
+
+Once this repository is cloned, make the ".slate" file in your home
+directory point to the .slate file that you just clone.
+
+So, if you cloned this project into:
+```~/projects/beginning-with-slate```, then type:
+
+```
+cd
+ln -s ~/projects/beginning-with-slate/.slate .slate
+```
+
+This will cause a symbolic link to be created in your home directory
+that points to the ```.slate``` file that comes with this project (and
+provides these key bindings).
+
+If you don't have git, or don't want to clone the repository, just
+navigate to the .slate file on github, and then save it to your
+computer and place it in your home directory so that it is saved as
+```~/.slate```
+
+Finally, once you've installed the configuration file, find the Slate
+icon at the top of your screen and select 'Relaunch and Load Config'
