@@ -47,7 +47,7 @@ configuration is checked into source control and easily managed.
 but the *configuration in this project* will focus on three simple
 ideas:
 
-### Manage Window Size and Placement
+### Manage Window Size And Placement
 
 You will be able to use a key press to manage windows.
 
@@ -65,8 +65,70 @@ With regard to window size and placement, you will be able to:
 If you have multiple monitors, you will be able to use a key press to
 make the current window appear on any monitor.
 
-### Manage the Currently Active Window
+### Manage The Currently Active Window
 
 You will be able to jump between windows with a key press in a fashion
 similar to (but faster and less error prone ) than using the
 COMMAND-TAB mechanism.
+
+### How Will This Work?
+
+Presuming you've got a QWERTY North American keyboard layout, if you
+look down you'll see the following keys *sort of* make a 3 x 3 grid:
+
+<table>
+  <tr>
+    <td>
+      u
+    </td>
+    <td>
+      i
+    </td>
+    <td>
+      o
+    </td>
+  </tr>
+    <tr>
+    <td>
+      j
+    </td>
+    <td>
+      k
+    </td>
+    <td>
+      l
+    </td>
+  </tr>
+    <tr>
+    <td>
+      m
+    </td>
+    <td>
+      ,
+    </td>
+    <td>
+      .
+    </td>
+  </tr>
+</table>
+
+The associated Slate configuration will make it so that if you hold
+CONTROL and COMMAND and then press the keys on the corners of this
+table, then you will cause the current window to take up one quarter
+of the screen and go to the associated corner, defined as follows:
+
+* ```COMMAND + CTRL + u``` = upper left
+* ```COMMAND + CTRL + o``` = upper right
+* ```COMMAND + CTRL + m``` = bottom left
+* ```COMMAND + CTRL + u``` = bottom right
+
+Further, the configuration makes it so that if you hold CONTROL and
+COMMAND and then press the keys on the top, bottom, left, and right,
+then you will cause the current window to take up one half of the
+screen and it will split vertically or horizontally, defined as
+follows:
+
+* ```COMMAND + CTRL + i``` = top half
+* ```COMMAND + CTRL + l``` = right half
+* ```COMMAND + CTRL + ,``` = bottom half
+* ```COMMAND + CTRL + j``` = bottom left
