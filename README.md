@@ -8,13 +8,13 @@ before, but found it inaccessible because it describes itself as:
 > a bit daunting to get configured
 
 Or, if you *have not* heard of [Slate](https://github.com/jigish/slate)
-before, but you are using MacOS and:
+before, but you are using MacOS **and**:
 
 * You find it slightly irritating whenever you manually adjust the
-  height and width of windows using a mouse, or
+  height and width of windows using a mouse, **or**
 
 * You find yourself with a two display setup and you wish you could
-  press a button and have an application jump between displays, or
+  press a button and have an application jump between displays, **or**
 
 * You find yourself pressing COMMAND + CONTROL to switch between
   applications, but sometimes you let go before you reach the one you
@@ -60,12 +60,12 @@ With regard to window size and placement, you will be able to:
   screen. You will be able to make it jump to any corner: upper left,
   upper right, bottom left, or bottom right.
 
-### Manage Windows between Displays
+### Manage Windows Between Displays
 
 If you have multiple monitors, you will be able to use a key press to
 make the current window appear on any monitor.
 
-### Manage the currently active Window
+### Manage the Currently Active Window
 
 You will be able to jump between windows with a key press in a fashion
 similar to (but faster and less error prone ) than using the
