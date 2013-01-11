@@ -194,7 +194,7 @@ provides these key bindings).
 If you don't have git, or don't want to clone the repository, just
 navigate to the .slate file on github, and then save it to your
 computer and place it in your home directory so that it is saved as
-```~/.slate```
+~/.slate.
 
 Finally, once you've installed the configuration file, find the Slate
 icon at the top of your screen and select 'Relaunch and Load Config'
