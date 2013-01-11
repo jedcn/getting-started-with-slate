@@ -1,7 +1,12 @@
-# See: https://github.com/jigish/slate
-# See: http://thume.ca/howto/2012/11/19/using-slate/
+# This is a Slate configuration file: https://github.com/jigish/slate
+# For a good overview: http://thume.ca/howto/2012/11/19/using-slate/
 #
-# Basic Config
+
+
+
+#
+# Highlevel configuration options
+#
 config defaultToCurrentScreen true
 config nudgePercentOf screenSize
 config resizePercentOf screenSize
@@ -9,8 +14,11 @@ config windowHintsShowIcons true
 config windowHintsIgnoreHiddenWindows false
 config windowHintsSpread true
 
+
+
 #
-# Abstract positions. Used in commands below.
+# Abstract positions for later use within configuration.
+#
 alias full move screenOriginX;screenOriginY screenSizeX;screenSizeY
 alias lefthalf move screenOriginX;screenOriginY screenSizeX/2;screenSizeY
 alias righthalf move screenOriginX+screenSizeX/2;screenOriginY screenSizeX/2;screenSizeY
@@ -22,7 +30,14 @@ alias bottomleft corner bottom-left resize:screenSizeX/2;screenSizeY/2
 alias bottomright corner bottom-right resize:screenSizeX/2;screenSizeY/2
 
 #
-# Push Bindings
+# The following 'bind' lines allow you to hold "CTRL" and "COMMAND"
+# and then press a third key that corresponds to 9 sections of a
+# square:
+#
+#   u  i  o
+#   j  k  l
+#   m  ,  .
+#
 bind u:ctrl;cmd  ${topleft}
 bind j:ctrl;cmd  ${lefthalf}
 bind m:ctrl;cmd  ${bottomleft}
@@ -35,12 +50,28 @@ bind o:ctrl;cmd  ${topright}
 bind l:ctrl;cmd  ${righthalf}
 bind .:ctrl;cmd  ${bottomright}
 
+
+
+# You can normally switch between windows on MacOS by pressing
+# COMMAND-TAB. The following Slate configuration provides an
+# alternative:
 #
-# Overlay all windows on screen with qwerty home row letters, so I can
-# foreground any of them with one more keystroke.
+# COMMAND + CONTROL + ; will cause Slate to display the letters on the
+# home row above window. Logos will appear on these letters, and you
+# can press the letter to switch to that window.
+#
 bind ;:cmd;ctrl hint ASDFGHJKL
 
-# Throw Bindings
+
+
+#
+# These bindings make it so that you can more easily move windows to
+# other displays. If you have two displays, you can press CTRL + CMD +
+# 2 to cause the current window to be moved, and appear full screen,
+# on your second display. If you subsequently press CTRL + CMD + 1,
+# the window which was just moved to your second display will come
+# back to your first display
+#
 bind 1:ctrl;cmd         throw 0 resize
 bind 2:ctrl;cmd         throw 1 resize
 bind 3:ctrl;cmd         throw 2 resize
