@@ -1,4 +1,4 @@
-# Beginning with Slate
+# Getting Started with Slate
 
 ## Overview
 
@@ -180,11 +180,11 @@ Once this repository is cloned, make the ".slate" file in your home
 directory point to the .slate file that you just clone.
 
 So, if you cloned this project into:
-```~/projects/beginning-with-slate```, then type:
+```~/projects/getting-started-with-slate```, then type:
 
 ```
 cd
-ln -s ~/projects/beginning-with-slate/.slate .slate
+ln -s ~/projects/getting-started-with-slate/.slate .slate
 ```
 
 This will cause a symbolic link to be created in your home directory
