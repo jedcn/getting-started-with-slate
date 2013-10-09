@@ -64,11 +64,11 @@ With regard to window size and placement, you will be able to:
 If you have multiple monitors, you will be able to use a key press to
 make the current window appear on any monitor.
 
-### Manage The Currently Active Window
+### Manage The Currently Active Window (Application)
 
-You will be able to jump between windows with a key press in a fashion
-similar to (but faster and less error prone ) than using the
-COMMAND-TAB mechanism.
+You will be able to jump between applications (windows) with a key
+press in a fashion similar to (but faster and less error prone ) than
+using the COMMAND-TAB mechanism.
 
 ### How Will This Work?
 
