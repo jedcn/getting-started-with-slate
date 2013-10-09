@@ -146,41 +146,33 @@ the current window take up the entire screen (it will be maximized).
 
 #### Moving Between Displays
 
-Coming Soon..
+If you've got two displays, press ```COMMAND + CONTROL + 2``` to cause
+the current window to appear on the second display. Immediately after,
+press ```COMMAND + CONTROL + 1``` to cause the same window to jump
+back to the first display.
 
-But, until then, if you've got two displays, press ```COMMAND +
-CONTROL + 2``` to cause the current window to appear on the second
-display. Immediately after, press ```COMMAND + CONTROL + 1``` to cause
-the same window to jump back to the first display.
+#### Switching Applications
 
-#### Switching Windows
+Open at least two applications. Then, press ```COMMAND + CONTROL + ;```
 
-Coming Soon..
-
-But, until then, open at least two windows. Then, press ```COMMAND +
-CONTROL + ;```
-
-As soon as you press that key-binding, application icons will appear
-and a letter will be associated with each icon. These letters are
-configured to always be on the home row of the QWERTY keyboard.
+When you press that key-binding, application icons will appear and a
+letter will be associated with each icon. These letters are configured
+to always be on the home row of the QWERTY keyboard.
 
 If you press the associated letter, you change applications accordingly.
 
 ### How do I get started?
 
-Coming Soon..
+Visit the Slate homepage and follow the installation instructions.
 
-But, until then, visit the Slate homepage and follow the installation
-instructions.
+Once you have installed slate, clone this repository to somewhere on
+your file system.
 
-Once is installed, clone this repository to somewhere on your file
-system.
+Once cloned, make the `.slate` file in your home directory point to
+the `.slate` file from the directory what was created when you cloned.
 
-Once this repository is cloned, make the ".slate" file in your home
-directory point to the .slate file that you just clone.
-
-So, if you cloned this project into:
-```~/projects/getting-started-with-slate```, then type:
+For example, if you cloned this project into:
+`~/projects/getting-started-with-slate`, then type:
 
 ```
 cd
@@ -188,13 +180,13 @@ ln -s ~/projects/getting-started-with-slate/.slate .slate
 ```
 
 This will cause a symbolic link to be created in your home directory
-that points to the ```.slate``` file that comes with this project (and
+that points to the `.slate` file that comes with this project (and
 provides these key bindings).
 
 If you don't have git, or don't want to clone the repository, just
 navigate to the .slate file on github, and then save it to your
 computer and place it in your home directory so that it is saved as
-~/.slate.
+`~/.slate`.
 
 Finally, once you've installed the configuration file, find the Slate
 icon at the top of your screen and select 'Relaunch and Load Config'
